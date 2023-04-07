@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact - Josh's Page</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+        <script src="script.js"></script>
+
+    </head>
+    <body>
+
+        <header>    
+            <div class="navigation">
+                <h1 id="logo"><img src="img/Wolf_Face_J2_(small).png" alt="Branch Logo"></h1> 
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main class="form-center">
+            <form>
+                <div class="form-row">
+                    <label for="uname_id">Full Name</label>
+                    <input type="text" id="uname_id" name="fullName" class="input-padron" required>
+
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email_id" name = "email" class="input-padron" required placeholder="email@domain.com">
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone_id" name="phoneNo" class="input-padron" required placeholder="(XXX) XXXX XXXX">
+                </div>
+
+                <div class="form-row">
+                    <label for="msg_id">Menssage</label>
+                    <textarea cols="70" rows="10" id="msg_id" name="message" class="input-padron" required></textarea>
+                </div>
+                
+                <fieldset>
+                    <legend>How would you like to be contacted?</legend>
+
+                    <label for="radio_email"><input type="radio" name="contact_channel" value="email" id="radio_email">Email</label>             
+                    <label for="radio_phone"><input type="radio" name="contact_channel" value="phone" id="radio_phone">Phone</label>
+                    <label for="radio_whatsapp"><input type="radio" name="contact_channel" value="whatsapp" id="radio_whatsapp" checked>WhatsApp</label>
+                    <label for="radio_sms"><input type="radio" name="contact_channel" value="sms" id="radio_sms">SMS</label>
+                    
+                </fieldset>
+               
+                <fieldset>
+                    <legend>When would you prefer to be contacted?</legend>
+                    <select name="contact_time">
+                        <option>Morning</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
+                    </select>
+                </fieldset>
+                
+                <label class="checkbox"><input type="checkbox" name="notifications" checked>Would you like to receive notifications about the site's new content?</label>                
+                                
+                <input type="submit" value="Send Form" class="send-form">
+
+            </form>
+
+
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxnlvbHMjyEq2Jj6ptEvDD5XpAi1XbkRdpyyRw9OKopA_GYWZok78oXwDR3iCsU0pqT/exec'
+                const form = document.querySelector('form')
+                const successMessage = document.querySelector('.success-message')
+              
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+              
+                  const formData = new FormData(form)
+                  formData.append('timestamp', new Date())
+              
+                  fetch(scriptURL, { method: 'POST', body: formData })
+                    .then(response => {
+                      console.log('Success!', response)
+                      form.reset() // Reset the form values
+                      successMessage.style.display = 'block'
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+            
+
+            
+        </main>
+        
+        <footer>
+            <img src="img/Wolf_Face_J2_W_(small).png"  alt="Branch Logo">
+            <p class="copyright">&copy Copyright Josh's Page - 2022
+              <a href="#" class="back-to-top">
+                Back to top <i class="fas fa-arrow-up"></i>
+              </a>
+            </p>
+        </footer>
+
+    </body>
+</html>
