@@ -309,3 +309,34 @@ legend{
 }
 
 
+
+
+/*  CSS for Upcoming Projects   */
+.upcoming-projects {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 50px;
+}
+
+.upcoming-projects ul {
+  /*list-style: none;*/
+  margin: 0;
+  /*padding: 0;*/
+}
+
+.upcoming-projects li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.upcoming-projects p {
+  /*font-size: 16px;*/
+  margin-top: 20px;
+}
+
+/*  End CSS for Upcoming Projects   */
+
+
+
+
