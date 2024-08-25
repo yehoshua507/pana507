@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="caption-container">
+        <h2>Image Caption</h2>
+        <p>Points to consider:</p>
+        <ul>
+            <li>The page contains 4 buttons at the top to interact with the different types of information available.</li>
+            <li>Hovering your mouse over any point will show you an image of the associated point of interest.</li>
+            <li>The letter K stands for Kicks.
+                <ul>
+                    <li>For example: 11 K = 11 kicks</li>
+                </ul>
+            </li>
+            <li>Measurements depend on the individual diver and the type of fin used.
+                <ul>
+                    <li>In my case, 1K = 58 inches or 4.83 feet.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <div class="button-container">
+            <button onclick="changeBackground('img/img1.jpeg', this)" class="selected">Points of Interest</button>
+            <button onclick="changeBackground('img/img2.jpeg', this)">Distances / Measures</button>
+            <button onclick="changeBackground('img/img3.jpeg', this)">Compass info.</button>
+            <button onclick="changeBackground('img/img4.jpeg', this)">All Together</button>
+        </div>
+
+        <div class="map-container">
+            <img src="img/img1.jpeg" alt="Map" class="map-image" id="map-image">
+            <div class="tooltip" id="tooltip">
+                <img src="" alt="Tooltip Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="compass-container">
+        <h1 class="compass-title">Welland Scuba Park</h1>
+        <img src="img/compass.png" alt="Compass" class="compass-image">
+        <a href="https://yehoshua507.github.io/pana507/" class="compass-link">About Author</a>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>

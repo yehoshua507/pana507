@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row; /* Align items horizontally */
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.caption-container {
+    width: 20vw;
+    flex-shrink: 0; /* Prevents shrinking */
+    margin-right: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+    position: relative;
+    display: flex;
+    flex-grow: 1; /* Allows this container to grow and shrink */
+    max-width: 800px;
+    width: 100%;
+    justify-content: center;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.map-point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.tooltip {
+    position: absolute;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensures the tooltip appears above everything else */
+}
+
+.tooltip img {
+    max-width: 100px;
+    height: auto;
+}
+
+.button-container {
+    margin: 10px 0;
+}
+
+.button-container button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Default button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button-container button.selected {
+    background-color: #FF5733; /* Highlight color for the selected button */
+}
+
+.compass-container {
+    width: 15vw; /* Fixed width */
+    flex-shrink: 0; /* Prevents shrinking */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even distribution between items */
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Space between map and compass */
+    height: 100%; /* Full height of the container */
+}
+
+.compass-title {
+    margin: 0; 
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+.compass-image {
+    width: 100%; /* Scale image to fit container width */
+    height: auto;
+}
+
+.compass-link {
+    margin-top: auto;
+    bottom: 10px; /* Adjust this value to control the distance from the bottom */
+    text-align: center;
+    width: 100%; /* Ensure the link is centered */
+}
+
+.caption-container ul {
+    list-style-type: disc; /* Default bullet style */
+    padding-left: 20px; /* Indentation for the list */
+    margin-bottom: 10px; /* Space between lists */
+}
+
+.caption-container ul ul {
+    list-style-type: circle; /* Different bullet style for nested lists */
+    padding-left: 25px; /* Indentation for nested lists */
+    margin-bottom: 0; /* Remove margin for nested lists */
+}
+
+.caption-container li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: large; 
+}
+
+.caption-container li::marker {
+    color: #FF5733; /* Custom color for the bullet points */
+}
+
+.caption-container h2 {
+    font-size: 1.5em; /* Adjust title size */
+    margin-bottom: 10px; /* Space between title and list */
+    color: #333; /* Title color */
+}
+
+.caption-container p {
+    font-size: 1.5em; /* Adjust paragraph font size */
+    margin-bottom: 10px; /* Space between paragraph and list */
+    color: #666; /* Paragraph text color */
+}
