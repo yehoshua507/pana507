@@ -15,9 +15,8 @@ const mapPoints = [
     { top: '77.625%', left: '27.25%', image: 'img/BEachChair.jpg' },    // beach chair
     { top: '86.25%', left: '36.875%', image: 'img/Car1.jpg' },          // car1            
     { top: '14%', left: '91%', image: 'img/car4.jpg' },                 // car4
-    { top: '13%', left: '65.25%', image: 'img/Train.jpg' },             // train
-    { top: '23%', left: '28.25%', image: 'img/BigAnchor.jpg' },         // big anchor
-    { top: '15.25%', left: '24.25%', image: 'img/Plane.jpg' }           // plane
+    { top: '10%', left: '63.75%', image: 'img/car3_1.jpg' },            // car3
+    { top: '10%', left: '44.25%', image: 'img/car3.jpg' },              // car2
 ];
 
 mapPoints.forEach((point, index) => {
