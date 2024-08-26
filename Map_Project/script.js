@@ -5,7 +5,7 @@ const mapPoints = [
     { top: '53.5%', left: '94.25%', image: 'img/Boat.JPG' },            // boat
     { top: '35.25%', left: '92.625%', image: 'img/Sub.jpg' },           // sub
     { top: '30.5%', left: '60.625%', image: 'img/Toilet.jpg' },         // toilet
-    { top: '48.375%', left: '68.75%', image: 'img/Tank.jpg' },          // tank
+    { top: '48.375%', left: '68.75%', image: 'img/Tank.JPG' },          // tank
     { top: '55.5%', left: '78.25%', image: 'img/MonkeyRack.jpg' },      // monkey bar
     { top: '55.5%', left: '63.375%', image: 'img/SnowMan.JPG' },        // snowman
     { top: '55.5%', left: '53.375%', image: 'img/Claus.jpg' },          // Claus
